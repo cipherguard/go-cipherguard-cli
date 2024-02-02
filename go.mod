@@ -1,6 +1,6 @@
 module github.com/khulnasoft/go-cipherguard-cli
 
-go 1.21.6
+go 1.18
 
 require (
 	github.com/alessio/shellescape v1.4.2
