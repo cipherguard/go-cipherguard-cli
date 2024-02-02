@@ -5,7 +5,7 @@ go 1.21.6
 require (
 	github.com/alessio/shellescape v1.4.2
 	github.com/google/cel-go v0.19.0
-	github.com/passbolt/go-passbolt v0.7.0
+	github.com/khulnasoft/go-cipherguard v0.0.0-20240202032003-b21b630784e9
 	github.com/pterm/pterm v0.12.77
 	github.com/spf13/cobra v1.8.0
 	github.com/spf13/viper v1.18.2

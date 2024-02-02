@@ -10,11 +10,11 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// FolderGetCmd Gets a Passbolt Folder
+// FolderGetCmd Gets a Cipherguard Folder
 var FolderGetCmd = &cobra.Command{
 	Use:   "folder",
-	Short: "Gets a Passbolt Folder",
-	Long:  `Gets a Passbolt Folder`,
+	Short: "Gets a Cipherguard Folder",
+	Long:  `Gets a Cipherguard Folder`,
 	RunE:  FolderGet,
 }
 

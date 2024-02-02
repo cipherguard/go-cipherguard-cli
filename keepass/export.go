@@ -6,25 +6,25 @@ import (
 	"os"
 
 	"github.com/khulnasoft/go-cipherguard-cli/util"
-	"github.com/passbolt/go-passbolt/api"
-	"github.com/passbolt/go-passbolt/helper"
+	"github.com/khulnasoft/go-cipherguard/api"
+	"github.com/khulnasoft/go-cipherguard/helper"
 	"github.com/pterm/pterm"
 	"github.com/spf13/cobra"
 	"github.com/tobischo/gokeepasslib/v3"
 	w "github.com/tobischo/gokeepasslib/v3/wrappers"
 )
 
-// KeepassExportCmd Exports a Passbolt Keepass
+// KeepassExportCmd Exports a Cipherguard Keepass
 var KeepassExportCmd = &cobra.Command{
 	Use:     "keepass",
-	Short:   "Exports Passbolt to a Keepass File",
-	Long:    `Exports Passbolt to a Keepass File`,
+	Short:   "Exports Cipherguard to a Keepass File",
+	Long:    `Exports Cipherguard to a Keepass File`,
 	Aliases: []string{},
 	RunE:    KeepassExport,
 }
 
 func init() {
-	KeepassExportCmd.Flags().StringP("file", "f", "passbolt-export.kdbx", "File name of the Keepass File")
+	KeepassExportCmd.Flags().StringP("file", "f", "cipherguard-export.kdbx", "File name of the Keepass File")
 	KeepassExportCmd.Flags().StringP("password", "p", "", "Password for the Keypass File, if empty prompts interactively")
 }
 
@@ -110,7 +110,7 @@ func KeepassExport(cmd *cobra.Command, args []string) error {
 	db := gokeepasslib.NewDatabase(
 		gokeepasslib.WithDatabaseKDBXVersion4(),
 	)
-	db.Content.Meta.DatabaseName = "Passbolt Export"
+	db.Content.Meta.DatabaseName = "Cipherguard Export"
 
 	if keepassPassword != "" {
 		db.Credentials = gokeepasslib.NewPasswordCredentials(keepassPassword)

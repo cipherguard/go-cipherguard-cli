@@ -9,8 +9,8 @@ import (
 // moveCmd represents the move command
 var moveCmd = &cobra.Command{
 	Use:   "move",
-	Short: "Moves a Passbolt Entity",
-	Long:  `Moves a Passbolt Entity`,
+	Short: "Moves a Cipherguard Entity",
+	Long:  `Moves a Cipherguard Entity`,
 }
 
 func init() {

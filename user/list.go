@@ -9,17 +9,17 @@ import (
 
 	"github.com/alessio/shellescape"
 	"github.com/khulnasoft/go-cipherguard-cli/util"
-	"github.com/passbolt/go-passbolt/api"
+	"github.com/khulnasoft/go-cipherguard/api"
 	"github.com/spf13/cobra"
 
 	"github.com/pterm/pterm"
 )
 
-// UserListCmd Lists a Passbolt User
+// UserListCmd Lists a Cipherguard User
 var UserListCmd = &cobra.Command{
 	Use:     "user",
-	Short:   "Lists Passbolt Users",
-	Long:    `Lists Passbolt Users`,
+	Short:   "Lists Cipherguard Users",
+	Long:    `Lists Cipherguard Users`,
 	Aliases: []string{"users"},
 	RunE:    UserList,
 }

@@ -11,8 +11,8 @@ import (
 // updateCmd represents the update command
 var updateCmd = &cobra.Command{
 	Use:     "update",
-	Short:   "Updates a Passbolt Entity",
-	Long:    `Updates a Passbolt Entity`,
+	Short:   "Updates a Cipherguard Entity",
+	Long:    `Updates a Cipherguard Entity`,
 	Aliases: []string{"change"},
 }
 

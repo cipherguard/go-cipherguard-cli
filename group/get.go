@@ -8,16 +8,16 @@ import (
 
 	"github.com/alessio/shellescape"
 	"github.com/khulnasoft/go-cipherguard-cli/util"
-	"github.com/passbolt/go-passbolt/helper"
+	"github.com/khulnasoft/go-cipherguard/helper"
 	"github.com/pterm/pterm"
 	"github.com/spf13/cobra"
 )
 
-// GroupGetCmd Gets a Passbolt Group
+// GroupGetCmd Gets a Cipherguard Group
 var GroupGetCmd = &cobra.Command{
 	Use:   "group",
-	Short: "Gets a Passbolt Group",
-	Long:  `Gets a Passbolt Group`,
+	Short: "Gets a Cipherguard Group",
+	Long:  `Gets a Cipherguard Group`,
 	RunE:  GroupGet,
 }
 

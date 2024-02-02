@@ -5,15 +5,15 @@ import (
 	"fmt"
 
 	"github.com/khulnasoft/go-cipherguard-cli/util"
-	"github.com/passbolt/go-passbolt/helper"
+	"github.com/khulnasoft/go-cipherguard/helper"
 	"github.com/spf13/cobra"
 )
 
-// ResourceShareCmd Shares a Passbolt Resource
+// ResourceShareCmd Shares a Cipherguard Resource
 var ResourceShareCmd = &cobra.Command{
 	Use:   "resource",
-	Short: "Shares a Passbolt Resource",
-	Long:  `Shares a Passbolt Resource`,
+	Short: "Shares a Cipherguard Resource",
+	Long:  `Shares a Cipherguard Resource`,
 	RunE:  ResourceShare,
 }
 

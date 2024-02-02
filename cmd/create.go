@@ -11,8 +11,8 @@ import (
 // createCmd represents the create command
 var createCmd = &cobra.Command{
 	Use:     "create",
-	Short:   "Creates a Passbolt Entity",
-	Long:    `Creates a Passbolt Entity`,
+	Short:   "Creates a Cipherguard Entity",
+	Long:    `Creates a Cipherguard Entity`,
 	Aliases: []string{"new"},
 }
 

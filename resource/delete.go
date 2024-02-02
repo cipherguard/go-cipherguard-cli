@@ -11,8 +11,8 @@ import (
 // ResourceDeleteCmd Deletes a Resource
 var ResourceDeleteCmd = &cobra.Command{
 	Use:   "resource",
-	Short: "Deletes a Passbolt Resource",
-	Long:  `Deletes a Passbolt Resource`,
+	Short: "Deletes a Cipherguard Resource",
+	Long:  `Deletes a Cipherguard Resource`,
 	RunE:  ResourceDelete,
 }
 

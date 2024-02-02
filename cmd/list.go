@@ -11,8 +11,8 @@ import (
 // listCmd represents the list command
 var listCmd = &cobra.Command{
 	Use:     "list",
-	Short:   "Lists Passbolt Entitys",
-	Long:    `Lists Passbolt Entitys`,
+	Short:   "Lists Cipherguard Entitys",
+	Long:    `Lists Cipherguard Entitys`,
 	Aliases: []string{"index", "ls", "filter", "search"},
 }
 

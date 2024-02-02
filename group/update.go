@@ -5,15 +5,15 @@ import (
 	"fmt"
 
 	"github.com/khulnasoft/go-cipherguard-cli/util"
-	"github.com/passbolt/go-passbolt/helper"
+	"github.com/khulnasoft/go-cipherguard/helper"
 	"github.com/spf13/cobra"
 )
 
-// GroupUpdateCmd Updates a Passbolt Group
+// GroupUpdateCmd Updates a Cipherguard Group
 var GroupUpdateCmd = &cobra.Command{
 	Use:   "group",
-	Short: "Updates a Passbolt Group",
-	Long:  `Updates a Passbolt Group`,
+	Short: "Updates a Cipherguard Group",
+	Long:  `Updates a Cipherguard Group`,
 	RunE:  GroupUpdate,
 }
 

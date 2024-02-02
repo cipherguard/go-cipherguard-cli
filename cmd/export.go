@@ -8,8 +8,8 @@ import (
 // exportCmd represents the export command
 var exportCmd = &cobra.Command{
 	Use:   "export",
-	Short: "Exports Passbolt Data",
-	Long:  `Exports Passbolt Data`,
+	Short: "Exports Cipherguard Data",
+	Long:  `Exports Cipherguard Data`,
 }
 
 func init() {

@@ -10,8 +10,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/passbolt/go-passbolt/api"
-	"github.com/passbolt/go-passbolt/helper"
+	"github.com/khulnasoft/go-cipherguard/api"
+	"github.com/khulnasoft/go-cipherguard/helper"
 	"github.com/spf13/viper"
 	"golang.org/x/term"
 )
@@ -40,7 +40,7 @@ func ReadPassword(prompt string) (string, error) {
 	return strings.Replace(pass, "\n", "", 1), nil
 }
 
-// GetClient gets a Logged in Passbolt Client
+// GetClient gets a Logged in Cipherguard Client
 func GetClient(ctx context.Context) (*api.Client, error) {
 	serverAddress := viper.GetString("serverAddress")
 	if serverAddress == "" {
@@ -113,11 +113,11 @@ func GetClient(ctx context.Context) (*api.Client, error) {
 				} else {
 					// MFA worked so lets find the cookie and return it
 					for _, cookie := range raw.Cookies() {
-						if cookie.Name == "passbolt_mfa" {
+						if cookie.Name == "cipherguard_mfa" {
 							return *cookie, nil
 						}
 					}
-					return http.Cookie{}, fmt.Errorf("Unable to find Passbolt MFA Cookie")
+					return http.Cookie{}, fmt.Errorf("Unable to find Cipherguard MFA Cookie")
 				}
 			}
 			return http.Cookie{}, fmt.Errorf("Failed MFA Challenge 3 times: %w", err)

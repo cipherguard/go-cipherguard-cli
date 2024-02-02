@@ -5,15 +5,15 @@ import (
 	"fmt"
 
 	"github.com/khulnasoft/go-cipherguard-cli/util"
-	"github.com/passbolt/go-passbolt/helper"
+	"github.com/khulnasoft/go-cipherguard/helper"
 	"github.com/spf13/cobra"
 )
 
-// ResourceUpdateCmd Updates a Passbolt Resource
+// ResourceUpdateCmd Updates a Cipherguard Resource
 var ResourceUpdateCmd = &cobra.Command{
 	Use:   "resource",
-	Short: "Updates a Passbolt Resource",
-	Long:  `Updates a Passbolt Resource`,
+	Short: "Updates a Cipherguard Resource",
+	Long:  `Updates a Cipherguard Resource`,
 	RunE:  ResourceUpdate,
 }
 

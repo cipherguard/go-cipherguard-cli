@@ -5,15 +5,15 @@ import (
 	"fmt"
 
 	"github.com/khulnasoft/go-cipherguard-cli/util"
-	"github.com/passbolt/go-passbolt/helper"
+	"github.com/khulnasoft/go-cipherguard/helper"
 	"github.com/spf13/cobra"
 )
 
-// FolderMoveCmd Moves a Passbolt Folder
+// FolderMoveCmd Moves a Cipherguard Folder
 var FolderMoveCmd = &cobra.Command{
 	Use:   "folder",
-	Short: "Moves a Passbolt Folder into a Folder",
-	Long:  `Moves a Passbolt Folder into a Folder`,
+	Short: "Moves a Cipherguard Folder into a Folder",
+	Long:  `Moves a Cipherguard Folder into a Folder`,
 	RunE:  FolderMove,
 }
 

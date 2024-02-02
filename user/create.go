@@ -6,15 +6,15 @@ import (
 	"fmt"
 
 	"github.com/khulnasoft/go-cipherguard-cli/util"
-	"github.com/passbolt/go-passbolt/helper"
+	"github.com/khulnasoft/go-cipherguard/helper"
 	"github.com/spf13/cobra"
 )
 
-// UserCreateCmd Creates a Passbolt User
+// UserCreateCmd Creates a Cipherguard User
 var UserCreateCmd = &cobra.Command{
 	Use:   "user",
-	Short: "Creates a Passbolt User",
-	Long:  `Creates a Passbolt User and Returns the Users ID`,
+	Short: "Creates a Cipherguard User",
+	Long:  `Creates a Cipherguard User and Returns the Users ID`,
 	RunE:  UserCreate,
 }
 

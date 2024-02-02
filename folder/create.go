@@ -6,15 +6,15 @@ import (
 	"fmt"
 
 	"github.com/khulnasoft/go-cipherguard-cli/util"
-	"github.com/passbolt/go-passbolt/helper"
+	"github.com/khulnasoft/go-cipherguard/helper"
 	"github.com/spf13/cobra"
 )
 
-// FolderCreateCmd Creates a Passbolt Folder
+// FolderCreateCmd Creates a Cipherguard Folder
 var FolderCreateCmd = &cobra.Command{
 	Use:   "folder",
-	Short: "Creates a Passbolt Folder",
-	Long:  `Creates a Passbolt Folder and Returns the Folders ID`,
+	Short: "Creates a Cipherguard Folder",
+	Long:  `Creates a Cipherguard Folder and Returns the Folders ID`,
 	RunE:  FolderCreate,
 }
 

@@ -6,7 +6,7 @@ import (
 
 	"github.com/google/cel-go/cel"
 	"github.com/khulnasoft/go-cipherguard-cli/util"
-	"github.com/passbolt/go-passbolt/api"
+	"github.com/khulnasoft/go-cipherguard/api"
 )
 
 // Environments for CEl

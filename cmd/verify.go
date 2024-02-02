@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/khulnasoft/go-cipherguard-cli/util"
-	"github.com/passbolt/go-passbolt/api"
+	"github.com/khulnasoft/go-cipherguard/api"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )

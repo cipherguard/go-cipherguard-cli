@@ -17,9 +17,9 @@ var cfgFile string
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:          "passbolt",
-	Short:        "A CLI tool to interact with Passbolt.",
-	Long:         `A CLI tool to interact with Passbolt.`,
+	Use:          "cipherguard",
+	Short:        "A CLI tool to interact with Cipherguard.",
+	Long:         `A CLI tool to interact with Cipherguard.`,
 	SilenceUsage: true,
 }
 
@@ -43,10 +43,10 @@ func init() {
 
 	rootCmd.PersistentFlags().Bool("debug", false, "Enable Debug Logging")
 	rootCmd.PersistentFlags().Duration("timeout", time.Minute, "Timeout for the Context")
-	rootCmd.PersistentFlags().String("serverAddress", "", "Passbolt Server Address (https://passbolt.example.com)")
-	rootCmd.PersistentFlags().String("userPrivateKey", "", "Passbolt User Private Key")
-	rootCmd.PersistentFlags().String("userPrivateKeyFile", "", "Passbolt User Private Key File, if set then the userPrivateKey will be Overwritten with the File Content")
-	rootCmd.PersistentFlags().String("userPassword", "", "Passbolt User Password")
+	rootCmd.PersistentFlags().String("serverAddress", "", "Cipherguard Server Address (https://cipherguard.example.com)")
+	rootCmd.PersistentFlags().String("userPrivateKey", "", "Cipherguard User Private Key")
+	rootCmd.PersistentFlags().String("userPrivateKeyFile", "", "Cipherguard User Private Key File, if set then the userPrivateKey will be Overwritten with the File Content")
+	rootCmd.PersistentFlags().String("userPassword", "", "Cipherguard User Password")
 	rootCmd.PersistentFlags().String("mfaMode", "interactive-totp", "How to Handle MFA, the following Modes exist: none, interactive-totp and noninteractive-totp")
 	rootCmd.PersistentFlags().String("totpToken", "", "Token to generate TOTP's, only used in nointeractive-totp mode")
 	rootCmd.PersistentFlags().Duration("totpOffset", time.Duration(0), "TOTP Generation offset only used in noninteractive-totp mode")
@@ -75,13 +75,13 @@ func initConfig() {
 		confDir, err := os.UserConfigDir()
 		cobra.CheckErr(err)
 
-		confDir = filepath.Join(confDir, "go-passbolt-cli")
+		confDir = filepath.Join(confDir, "go-cipherguard-cli")
 		_ = os.MkdirAll(confDir, 0700)
 
 		viper.SetConfigPermissions(os.FileMode(0600))
 		viper.AddConfigPath(confDir)
 		viper.SetConfigType("toml")
-		viper.SetConfigName("go-passbolt-cli")
+		viper.SetConfigName("go-cipherguard-cli")
 	}
 
 	viper.AutomaticEnv() // read in environment variables that match

@@ -9,18 +9,18 @@ import (
 
 	"github.com/alessio/shellescape"
 	"github.com/khulnasoft/go-cipherguard-cli/util"
-	"github.com/passbolt/go-passbolt/api"
-	"github.com/passbolt/go-passbolt/helper"
+	"github.com/khulnasoft/go-cipherguard/api"
+	"github.com/khulnasoft/go-cipherguard/helper"
 	"github.com/spf13/cobra"
 
 	"github.com/pterm/pterm"
 )
 
-// ResourceListCmd Lists a Passbolt Resource
+// ResourceListCmd Lists a Cipherguard Resource
 var ResourceListCmd = &cobra.Command{
 	Use:     "resource",
-	Short:   "Lists Passbolt Resources",
-	Long:    `Lists Passbolt Resources`,
+	Short:   "Lists Cipherguard Resources",
+	Long:    `Lists Cipherguard Resources`,
 	Aliases: []string{"resources"},
 	RunE:    ResourceList,
 }

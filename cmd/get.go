@@ -11,8 +11,8 @@ import (
 // getCmd represents the get command
 var getCmd = &cobra.Command{
 	Use:     "get",
-	Short:   "Gets a Passbolt Entity",
-	Long:    `Gets a Passbolt Entity`,
+	Short:   "Gets a Cipherguard Entity",
+	Long:    `Gets a Cipherguard Entity`,
 	Aliases: []string{"read"},
 }
 

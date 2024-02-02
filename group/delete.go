@@ -11,8 +11,8 @@ import (
 // GroupDeleteCmd Deletes a Group
 var GroupDeleteCmd = &cobra.Command{
 	Use:   "group",
-	Short: "Deletes a Passbolt Group",
-	Long:  `Deletes a Passbolt Group`,
+	Short: "Deletes a Cipherguard Group",
+	Long:  `Deletes a Cipherguard Group`,
 	RunE:  GroupDelete,
 }
 

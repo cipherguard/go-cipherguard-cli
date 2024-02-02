@@ -11,8 +11,8 @@ import (
 // deleteCmd represents the delete command
 var deleteCmd = &cobra.Command{
 	Use:     "delete",
-	Short:   "Deletes a Passbolt Entity",
-	Long:    `Deletes a Passbolt Entity`,
+	Short:   "Deletes a Cipherguard Entity",
+	Long:    `Deletes a Cipherguard Entity`,
 	Aliases: []string{"remove"},
 }
 

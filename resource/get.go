@@ -7,15 +7,15 @@ import (
 
 	"github.com/alessio/shellescape"
 	"github.com/khulnasoft/go-cipherguard-cli/util"
-	"github.com/passbolt/go-passbolt/helper"
+	"github.com/khulnasoft/go-cipherguard/helper"
 	"github.com/spf13/cobra"
 )
 
-// ResourceGetCmd Gets a Passbolt Resource
+// ResourceGetCmd Gets a Cipherguard Resource
 var ResourceGetCmd = &cobra.Command{
 	Use:   "resource",
-	Short: "Gets a Passbolt Resource",
-	Long:  `Gets a Passbolt Resource`,
+	Short: "Gets a Cipherguard Resource",
+	Long:  `Gets a Cipherguard Resource`,
 	RunE:  ResourceGet,
 }
 

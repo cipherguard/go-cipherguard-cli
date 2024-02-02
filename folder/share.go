@@ -5,15 +5,15 @@ import (
 	"fmt"
 
 	"github.com/khulnasoft/go-cipherguard-cli/util"
-	"github.com/passbolt/go-passbolt/helper"
+	"github.com/khulnasoft/go-cipherguard/helper"
 	"github.com/spf13/cobra"
 )
 
-// FolderShareCmd Shares a Passbolt Folder
+// FolderShareCmd Shares a Cipherguard Folder
 var FolderShareCmd = &cobra.Command{
 	Use:   "folder",
-	Short: "Shares a Passbolt Folder",
-	Long:  `Shares a Passbolt Folder`,
+	Short: "Shares a Cipherguard Folder",
+	Long:  `Shares a Cipherguard Folder`,
 	RunE:  FolderShare,
 }
 

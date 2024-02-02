@@ -6,15 +6,15 @@ import (
 	"fmt"
 
 	"github.com/khulnasoft/go-cipherguard-cli/util"
-	"github.com/passbolt/go-passbolt/helper"
+	"github.com/khulnasoft/go-cipherguard/helper"
 	"github.com/spf13/cobra"
 )
 
-// GroupCreateCmd Creates a Passbolt Group
+// GroupCreateCmd Creates a Cipherguard Group
 var GroupCreateCmd = &cobra.Command{
 	Use:   "group",
-	Short: "Creates a Passbolt Group",
-	Long:  `Creates a Passbolt Group and Returns the Groups ID`,
+	Short: "Creates a Cipherguard Group",
+	Long:  `Creates a Cipherguard Group and Returns the Groups ID`,
 	RunE:  GroupCreate,
 }
 

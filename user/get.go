@@ -7,15 +7,15 @@ import (
 
 	"github.com/alessio/shellescape"
 	"github.com/khulnasoft/go-cipherguard-cli/util"
-	"github.com/passbolt/go-passbolt/helper"
+	"github.com/khulnasoft/go-cipherguard/helper"
 	"github.com/spf13/cobra"
 )
 
-// UserGetCmd Gets a Passbolt User
+// UserGetCmd Gets a Cipherguard User
 var UserGetCmd = &cobra.Command{
 	Use:   "user",
-	Short: "Gets a Passbolt User",
-	Long:  `Gets a Passbolt User`,
+	Short: "Gets a Cipherguard User",
+	Long:  `Gets a Cipherguard User`,
 	RunE:  UserGet,
 }
 

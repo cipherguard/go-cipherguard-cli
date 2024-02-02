@@ -1,10 +1,10 @@
-# go-passbolt-cli
-A CLI tool to interact with Passbolt, an Open source Password Manager for teams.
+# go-cipherguard-cli
+A CLI tool to interact with Cipherguard, an Open source Password Manager for teams.
 
-If you want to do something more complicated: [this Go Module](https://github.com/passbolt/go-passbolt) to Interact with Passbolt from Go might intrest you.
+If you want to do something more complicated: [this Go Module](https://github.com/khulnasoft/go-cipherguard) to Interact with Cipherguard from Go might intrest you.
 
 
-Disclaimer: This project is community driven and not associated with Passbolt SA
+Disclaimer: This project is community driven and not associated with Cipherguard SA
 # Install
 
 ## Via Package (Prefered):
@@ -12,7 +12,7 @@ Disclaimer: This project is community driven and not associated with Passbolt SA
     Install via your Distros Package manager like `dpkg -i`
 
 ## Via Homebrew
-    brew install passbolt/tap/go-passbolt-cli
+    brew install cipherguard/tap/go-cipherguard-cli
 
 ## Via Archive:
     Download and Extract the Archive for your OS and architecture from the Latest Release.
@@ -20,18 +20,18 @@ Note: tab completion and manpages will need to be installed manually.
 
 ## Via Go:
     go install github.com/khulnasoft/go-cipherguard-cli@latest
-Note: this will install the binary as go-passbolt-cli, also tab completion and manpages will be missing.
+Note: this will install the binary as go-cipherguard-cli, also tab completion and manpages will be missing.
 
 # Getting Started
 First you need to Setup basic information: the Server Address, your Private Key and your Password.
 You have these options:
 - Save it in the config file using
 ```
-passbolt configure --serverAddress https://passbolt.example.org --userPassword '1234' --userPrivateKeyFile 'keys/privatekey.asc' 
+cipherguard configure --serverAddress https://cipherguard.example.org --userPassword '1234' --userPrivateKeyFile 'keys/privatekey.asc' 
 ```
 or
 ```
-passbolt configure --serverAddress https://passbolt.example.org --userPassword '1234' --userPrivateKey '-----BEGIN PGP PRIVATE KEY BLOCK-----' 
+cipherguard configure --serverAddress https://cipherguard.example.org --userPassword '1234' --userPrivateKey '-----BEGIN PGP PRIVATE KEY BLOCK-----' 
 ```
 - Setup Environment Variables
 - Provide the Flags manually every time
@@ -46,22 +46,22 @@ Notes:
 
 Generally the Structure of Commands is like this:
 ```bash
-go-passbolt-cli action entity [arguments]
+go-cipherguard-cli action entity [arguments]
 ```
 
 Action is the Action you want to perform like Creating, Updating or Deleting an Entity.
 Entity is a Resource(Password), Folder, User or Group that you want to apply an action to.
 
-In Passbolt a Password is usually revert to as a Resource.
+In Cipherguard a Password is usually revert to as a Resource.
 
 To Create a Resource you can do this, it will return the ID of the newly created Resource:
 ```bash
-go-passbolt-cli create resource --name "Test Resource" --password "Strong Password"
+go-cipherguard-cli create resource --name "Test Resource" --password "Strong Password"
 ```
 
 You can then list all users:
 ```bash
-go-passbolt-cli list user
+go-cipherguard-cli list user
 ```
 Note: you can adjust which columns should be listed using the flag `--column` or its short from `-c`, if you want multiple column then you need to specify this flag multiple times.
 
@@ -77,7 +77,7 @@ For sharing we will need to know how we want to share, for that there are these 
 
 Now that we have a Resource ID, know the ID's of other Users and about know about Permission Types, we can share the Resource with them:
 ```bash
-go-passbolt-cli share resource --id id_of_resource_to_share --type type_of_permission --user id_of_user_to_share_with
+go-cipherguard-cli share resource --id id_of_resource_to_share --type type_of_permission --user id_of_user_to_share_with
 ```
 Note: you can supply the the users argument multiple times to share with multiple users
 
@@ -93,7 +93,7 @@ You can setup MFA also using the configuration sub command, only TOTP is support
 
 
 # Server Verification
-To enable Server Verification you need to run `passbolt verify` once, after that the server will always be verified if the same config is used
+To enable Server Verification you need to run `cipherguard verify` once, after that the server will always be verified if the same config is used
 
 # Scripting
 For Scripting we have a -j or --json flag to convert the Output for the create, get and list commands to JSON for easier Parsing in Scripts.
@@ -101,6 +101,6 @@ For Scripting we have a -j or --json flag to convert the Output for the create, 
 Note: The JSON Output does not cover Error Messages, you can detect Errors by checking if the Exitcode is not 0
 
 # Documentation
-Usage for all Subcommands is [here](https://github.com/khulnasoft/go-cipherguard-cli/wiki/passbolt).
-And is also available via `man passbolt`
+Usage for all Subcommands is [here](https://github.com/khulnasoft/go-cipherguard-cli/wiki/cipherguard).
+And is also available via `man cipherguard`
 

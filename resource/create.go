@@ -6,15 +6,15 @@ import (
 	"fmt"
 
 	"github.com/khulnasoft/go-cipherguard-cli/util"
-	"github.com/passbolt/go-passbolt/helper"
+	"github.com/khulnasoft/go-cipherguard/helper"
 	"github.com/spf13/cobra"
 )
 
-// ResourceCreateCmd Creates a Passbolt Resource
+// ResourceCreateCmd Creates a Cipherguard Resource
 var ResourceCreateCmd = &cobra.Command{
 	Use:   "resource",
-	Short: "Creates a Passbolt Resource",
-	Long:  `Creates a Passbolt Resource and Returns the Resources ID`,
+	Short: "Creates a Cipherguard Resource",
+	Long:  `Creates a Cipherguard Resource and Returns the Resources ID`,
 	RunE:  ResourceCreate,
 }
 

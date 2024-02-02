@@ -11,8 +11,8 @@ import (
 // FolderDeleteCmd Deletes a Folder
 var FolderDeleteCmd = &cobra.Command{
 	Use:   "folder",
-	Short: "Deletes a Passbolt Folder",
-	Long:  `Deletes a Passbolt Folder`,
+	Short: "Deletes a Cipherguard Folder",
+	Long:  `Deletes a Cipherguard Folder`,
 	RunE:  FolderDelete,
 }
 

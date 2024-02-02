@@ -5,15 +5,15 @@ import (
 	"fmt"
 
 	"github.com/khulnasoft/go-cipherguard-cli/util"
-	"github.com/passbolt/go-passbolt/helper"
+	"github.com/khulnasoft/go-cipherguard/helper"
 	"github.com/spf13/cobra"
 )
 
 // UserDeleteCmd Deletes a User
 var UserDeleteCmd = &cobra.Command{
 	Use:   "user",
-	Short: "Deletes a Passbolt User",
-	Long:  `Deletes a Passbolt User`,
+	Short: "Deletes a Cipherguard User",
+	Long:  `Deletes a Cipherguard User`,
 	RunE:  UserDelete,
 }
 

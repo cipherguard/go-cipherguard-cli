@@ -9,17 +9,17 @@ import (
 
 	"github.com/alessio/shellescape"
 	"github.com/khulnasoft/go-cipherguard-cli/util"
-	"github.com/passbolt/go-passbolt/api"
+	"github.com/khulnasoft/go-cipherguard/api"
 	"github.com/spf13/cobra"
 
 	"github.com/pterm/pterm"
 )
 
-// GroupListCmd Lists a Passbolt Group
+// GroupListCmd Lists a Cipherguard Group
 var GroupListCmd = &cobra.Command{
 	Use:     "group",
-	Short:   "Lists Passbolt Groups",
-	Long:    `Lists Passbolt Groups`,
+	Short:   "Lists Cipherguard Groups",
+	Long:    `Lists Cipherguard Groups`,
 	Aliases: []string{"groups"},
 	RunE:    GroupList,
 }

@@ -9,17 +9,17 @@ import (
 
 	"github.com/alessio/shellescape"
 	"github.com/khulnasoft/go-cipherguard-cli/util"
-	"github.com/passbolt/go-passbolt/api"
+	"github.com/khulnasoft/go-cipherguard/api"
 	"github.com/spf13/cobra"
 
 	"github.com/pterm/pterm"
 )
 
-// FolderListCmd Lists a Passbolt Folder
+// FolderListCmd Lists a Cipherguard Folder
 var FolderListCmd = &cobra.Command{
 	Use:     "folder",
-	Short:   "Lists Passbolt Folders",
-	Long:    `Lists Passbolt Folders`,
+	Short:   "Lists Cipherguard Folders",
+	Long:    `Lists Cipherguard Folders`,
 	Aliases: []string{"folders"},
 	RunE:    FolderList,
 }

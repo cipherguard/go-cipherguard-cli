@@ -1,4 +1,4 @@
-project_name: go-passbolt-cli
+project_name: go-cipherguard-cli
 checksum:
   name_template: 'checksums.txt'
 builds:
@@ -12,7 +12,7 @@ builds:
     goarch:
       - amd64
       - arm64
-    binary: passbolt
+    binary: cipherguard
 archives:
   - files:
       - completion/*
@@ -26,17 +26,17 @@ release:
     ## Release {{ .Tag }} - ({{ .Date }})
 nfpms:
 - maintainer: Samuel Lorch <sam@soontm.de>
-  description: A CLI for Passbolt.
+  description: A CLI for Cipherguard.
   homepage: https://github.com/khulnasoft/go-cipherguard-cli
   license: MIT
   contents:
-    - src: /home/runner/work/go-passbolt-cli/go-passbolt-cli/completion/bash
-      dst: /usr/share/bash-completion/completions/passbolt
-    - src: /home/runner/work/go-passbolt-cli/go-passbolt-cli/completion/zsh
-      dst: /usr/share/zsh/site-functions/_passbolt
-    - src: /home/runner/work/go-passbolt-cli/go-passbolt-cli/completion/fish
-      dst: /usr/share/fish/vendor_completions.d/passbolt.fish
-    - src: /home/runner/work/go-passbolt-cli/go-passbolt-cli/man/*
+    - src: /home/runner/work/go-cipherguard-cli/go-cipherguard-cli/completion/bash
+      dst: /usr/share/bash-completion/completions/cipherguard
+    - src: /home/runner/work/go-cipherguard-cli/go-cipherguard-cli/completion/zsh
+      dst: /usr/share/zsh/site-functions/_cipherguard
+    - src: /home/runner/work/go-cipherguard-cli/go-cipherguard-cli/completion/fish
+      dst: /usr/share/fish/vendor_completions.d/cipherguard.fish
+    - src: /home/runner/work/go-cipherguard-cli/go-cipherguard-cli/man/*
       dst: /usr/share/man/man1/
   recommends:
     - bash_completion
@@ -47,17 +47,17 @@ brews:
   - homepage: https://github.com/khulnasoft/go-cipherguard-cli
     license: "MIT"
     skip_upload: false
-    description: "A CLI tool to interact with Passbolt, a Open source Password Manager for Teams"
+    description: "A CLI tool to interact with Cipherguard, a Open source Password Manager for Teams"
     folder: Formula
     install: |
-      bin.install "passbolt"
-      bash_completion.install "completion/bash" => "passbolt"
-      zsh_completion.install "completion/zsh" => "_passbolt"
-      fish_completion.install "completion/fish" => "passbolt.fish"
+      bin.install "cipherguard"
+      bash_completion.install "completion/bash" => "cipherguard"
+      zsh_completion.install "completion/zsh" => "_cipherguard"
+      fish_completion.install "completion/fish" => "cipherguard.fish"
       man1.install Dir["man/*"]
       # ...
     repository:
-      owner: passbolt
+      owner: cipherguard
       name: homebrew-tap
       token: "{{ .Env.TAP_GITHUB_TOKEN }}"
         

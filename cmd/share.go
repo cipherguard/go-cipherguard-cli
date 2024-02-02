@@ -9,8 +9,8 @@ import (
 // shareCmd represents the share command
 var shareCmd = &cobra.Command{
 	Use:   "share",
-	Short: "Shares a Passbolt Entity",
-	Long:  `Shares a Passbolt Entity`,
+	Short: "Shares a Cipherguard Entity",
+	Long:  `Shares a Cipherguard Entity`,
 }
 
 func init() {
