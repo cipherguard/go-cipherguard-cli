@@ -7,8 +7,13 @@ If you want to do something more complicated: [this Go Module](https://github.co
 Disclaimer: This project is community driven and not associated with Cipherguard SA
 # Install
 
-## Via Package (Prefered):
-    Download the Package for your OS and architecture from the Latest Release.
+## Via Repository (Prefered):
+[![Packaging status](https://repology.org/badge/vertical-allrepos/go:cipherguard-cli.svg)](https://repology.org/project/go:cipherguard-cli/versions)
+
+    Use the package from your Distros Official Repository
+
+## Via Package:
+    Download the deb/rpm Package for your Distro and architecture from the Latest Release.
     Install via your Distros Package manager like `dpkg -i`
 
 ## Via Homebrew
@@ -46,7 +51,7 @@ Notes:
 
 Generally the Structure of Commands is like this:
 ```bash
-go-cipherguard-cli action entity [arguments]
+cipherguard action entity [arguments]
 ```
 
 Action is the Action you want to perform like Creating, Updating or Deleting an Entity.
@@ -56,12 +61,12 @@ In Cipherguard a Password is usually revert to as a Resource.
 
 To Create a Resource you can do this, it will return the ID of the newly created Resource:
 ```bash
-go-cipherguard-cli create resource --name "Test Resource" --password "Strong Password"
+cipherguard create resource --name "Test Resource" --password "Strong Password"
 ```
 
 You can then list all users:
 ```bash
-go-cipherguard-cli list user
+cipherguard list user
 ```
 Note: you can adjust which columns should be listed using the flag `--column` or its short from `-c`, if you want multiple column then you need to specify this flag multiple times.
 
@@ -77,7 +82,7 @@ For sharing we will need to know how we want to share, for that there are these 
 
 Now that we have a Resource ID, know the ID's of other Users and about know about Permission Types, we can share the Resource with them:
 ```bash
-go-cipherguard-cli share resource --id id_of_resource_to_share --type type_of_permission --user id_of_user_to_share_with
+cipherguard share resource --id id_of_resource_to_share --type type_of_permission --user id_of_user_to_share_with
 ```
 Note: you can supply the the users argument multiple times to share with multiple users
 
@@ -89,7 +94,7 @@ You can setup MFA also using the configuration sub command, only TOTP is support
 | --- | --- |
 |`none`|just errors if challenged for MFA.
 |`interactive-totp` | prompts for interactive entry of TOTP Codes.
-|`noninteractive-totp` | automatically generates TOTP Codes when challenged, it requires the `totpToken` flag to be set to your totp Secret, you can configure the behavior using the `mfaDelay`, `mfaRetrys` and `totpOffset` flags
+|`noninteractive-totp` | automatically generates TOTP Codes when challenged, it requires the `mfaTotpToken` flag to be set to your totp Secret, you can configure the behavior using the `mfaDelay`, `mfaRetrys` and `mfaTotpOffset` flags
 
 
 # Server Verification

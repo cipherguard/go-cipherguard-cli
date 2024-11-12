@@ -48,7 +48,7 @@ brews:
     license: "MIT"
     skip_upload: false
     description: "A CLI tool to interact with Cipherguard, a Open source Password Manager for Teams"
-    folder: Formula
+    directory: Formula
     install: |
       bin.install "cipherguard"
       bash_completion.install "completion/bash" => "cipherguard"
@@ -57,7 +57,7 @@ brews:
       man1.install Dir["man/*"]
       # ...
     repository:
-      owner: cipherguard
+      owner: khulnasoft
       name: homebrew-tap
       token: "{{ .Env.TAP_GITHUB_TOKEN }}"
         

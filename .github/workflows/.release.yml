@@ -13,33 +13,45 @@ jobs:
     steps:
       -
         name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
       -
         name: Set up Go
-        uses: actions/setup-go@v2
+        uses: actions/setup-go@v5
         with:
-          go-version: 1.18
+          go-version: 1.21
       - 
         name: Generate Man and Completions
         run: |
           mkdir completion
-          go run main.go completion bash > completion/bash
-          go run main.go completion zsh > completion/zsh
-          go run main.go completion fish > completion/fish
-          go run main.go completion powershell > completion/powershell
+          go run *.go completion bash > completion/bash
+          go run *.go completion zsh > completion/zsh
+          go run *.go completion fish > completion/fish
+          go run *.go completion powershell > completion/powershell
           mkdir man
-          go run main.go gendoc --type man
+          go run *.go gendoc --type man
           pwd
           ls
       -
+        if: ${{ !startsWith(github.ref, 'refs/tags/v') }}
+        run: echo "flags=--snapshot" >> $GITHUB_ENV
+      -
         name: Run GoReleaser
-        uses: goreleaser/goreleaser-action@v2
+        uses: goreleaser/goreleaser-action@v5
         with:
           distribution: goreleaser
           version: latest
-          args: release --clean
+          args: release --clean ${{ env.flags }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TAP_GITHUB_TOKEN: ${{ secrets.TAP_GITHUB_TOKEN }}
+      - 
+        name: Run Version
+        run: |
+          dist/go-cipherguard-cli_linux_amd64_v1/cipherguard -v
+      - 
+        uses: actions/upload-artifact@v4
+        with:
+          name: go-cipherguard-cli-artifacts
+          path: dist/

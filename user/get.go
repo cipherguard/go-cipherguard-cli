@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/alessio/shellescape"
+	"al.essio.dev/pkg/shellescape"
 	"github.com/khulnasoft/go-cipherguard-cli/util"
 	"github.com/khulnasoft/go-cipherguard/helper"
 	"github.com/spf13/cobra"

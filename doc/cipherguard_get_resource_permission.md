@@ -1,21 +1,22 @@
-doc/cipherguard_export_keepass.md## cipherguard export keepass
+doc/cipherguard_get_resource_permission.md## cipherguard get resource permission
 
-Exports Cipherguard to a Keepass File
+Gets Permissions for a Cipherguard Resource
 
 ### Synopsis
 
-Exports Cipherguard to a Keepass File
+Gets Permissions for a Cipherguard Resource
 
 ```
-cipherguard export keepass [flags]
+cipherguard get resource permission [flags]
 ```
 
 ### Options
 
 ```
-  -f, --file string       File name of the Keepass File (default "cipherguard-export.kdbx")
-  -h, --help              help for keepass
-  -p, --password string   Password for the Keypass File, if empty prompts interactively
+  -c, --column stringArray   Columns to return, possible Columns:
+                             ID, Aco, AcoForeignKey, Aro, AroForeignKey, Type, CreatedTimestamp, ModifiedTimestamp (default [ID,Aco,AcoForeignKey,Aro,AroForeignKey,Type])
+  -h, --help                 help for permission
+      --id string            id of Resource to Get
 ```
 
 ### Options inherited from parent commands
@@ -23,6 +24,7 @@ cipherguard export keepass [flags]
 ```
       --config string               Config File
       --debug                       Enable Debug Logging
+  -j, --json                        Output JSON
       --mfaDelay duration           Delay between MFA Attempts, only used in noninteractive modes (default 10s)
       --mfaMode string              How to Handle MFA, the following Modes exist: none, interactive-totp and noninteractive-totp (default "interactive-totp")
       --mfaRetrys uint              How often to retry TOTP Auth, only used in nointeractive modes (default 3)
@@ -37,5 +39,5 @@ cipherguard export keepass [flags]
 
 ### SEE ALSO
 
-* [cipherguard export](cipherguard_export)	 - Exports Cipherguard Data
+* [cipherguard get resource](cipherguard_get_resource)	 - Gets a Cipherguard Resource
 
