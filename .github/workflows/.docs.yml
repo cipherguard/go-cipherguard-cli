@@ -30,4 +30,4 @@ jobs:
       with:
        path: "doc"
       env:
-       ORG_REPO_TOKEN: ${{ secrets.ORG_REPO_TOKEN }}
+       GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
