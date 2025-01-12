@@ -25,7 +25,7 @@ release:
   header: |
     ## Release {{ .Tag }} - ({{ .Date }})
 nfpms:
-- maintainer: Samuel Lorch <sam@soontm.de>
+- maintainer: Md Sulaiman <dev.sulaiman@icloud.com>
   description: A CLI for Cipherguard.
   homepage: https://github.com/khulnasoft/go-cipherguard-cli
   license: MIT
