@@ -34,10 +34,8 @@ nfpms:
       dst: /usr/share/bash-completion/completions/cipherguard
     - src: ./completion/zsh
       dst: /usr/share/zsh/site-functions/_cipherguard
-    - src: /home/runner/work/go-cipherguard-cli/go-cipherguard-cli/completion/fish
+    - src: ./completion/fish
       dst: /usr/share/fish/vendor_completions.d/cipherguard.fish
-    - src: /home/runner/work/go-cipherguard-cli/go-cipherguard-cli/man/*
-      dst: /usr/share/man/man1/
   recommends:
     - bash_completion
   formats:
